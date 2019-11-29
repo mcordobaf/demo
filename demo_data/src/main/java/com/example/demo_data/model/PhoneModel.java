@@ -1,5 +1,7 @@
 package com.example.demo_data.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -9,8 +11,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "PHONES")
-public class PhoneModel {
+public class PhoneModel implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6349496947210032156L;
 	@Id
 	private String number;
 	@Id

@@ -1,9 +1,9 @@
 package com.example.demo_data.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Column;
@@ -32,7 +32,7 @@ public class UserModel implements Serializable {
 	private String password;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
-	private Set<PhoneModel> phones;
+	private List<PhoneModel> phones;
 	
 	private Date created;
 	private Date modified;
@@ -83,13 +83,13 @@ public class UserModel implements Serializable {
 		this.password = password;
 	}
 
-	public Set<PhoneModel> getPhones() {
+	public List<PhoneModel> getPhones() {
 		if (phones == null)
-			phones = new HashSet<PhoneModel>();
+			phones = new ArrayList<PhoneModel>();
 		return phones;
 	}
 
-	public void setPhones(Set<PhoneModel> phones) {
+	public void setPhones(List<PhoneModel> phones) {
 		this.phones = phones;
 	}
 

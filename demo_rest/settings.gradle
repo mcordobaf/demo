@@ -1,0 +1,3 @@
+rootProject.name = 'demo_rest'
+include 'demo_data'
+project(':demo_data').projectDir=new File('../demo_data')
