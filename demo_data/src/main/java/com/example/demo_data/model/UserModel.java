@@ -49,6 +49,8 @@ public class UserModel implements Serializable {
 		
 		if (StringUtils.isEmpty(id))
 			this.id = UUID.randomUUID().toString();
+		
+		this.token = UUID.randomUUID().toString();
 	}
 	
 	public String getId() {
